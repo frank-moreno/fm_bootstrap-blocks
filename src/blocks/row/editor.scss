@@ -1,0 +1,113 @@
+/**
+ * Row Block Editor Styles
+ */
+
+ .wp-block-bootstrap-blocks-row {
+    // Add a border to make the row visible in the editor
+    border: 1px dashed #ddd;
+    padding: 15px;
+    position: relative;
+    margin-bottom: 28px;
+    
+    // Row label
+    &::before {
+        content: 'Row';
+        position: absolute;
+        bottom: -25px;
+        left: 0;
+        background: #f0f0f0;
+        padding: 2px 8px;
+        font-size: 11px;
+        border-radius: 3px;
+        border: 1px solid #ddd;
+        color: #555;
+    }
+    
+    // Hover state
+    &:hover {
+        border-color: #69c;
+        
+        &::before {
+            background: #69c;
+            color: #fff;
+            border-color: #69c;
+        }
+    }
+    
+    // Add grid display to the inner blocks
+    > .block-editor-inner-blocks > .block-editor-block-list__layout {
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: -15px;
+        margin-left: -15px;
+        
+        // No gutters
+        .g-0 & {
+            margin-right: 0;
+            margin-left: 0;
+        }
+        
+        // Different gutter sizes
+        @for $i from 1 through 5 {
+            .g-#{$i} & {
+                margin-right: -#{$i * 0.25}rem;
+                margin-left: -#{$i * 0.25}rem;
+            }
+        }
+    }
+    
+    // Make the appender visible
+    .block-list-appender {
+        width: 100%;
+        margin-top: 15px;
+    }
+}
+
+// Breakpoint tabs component styles
+.bootstrap-blocks-breakpoint-tabs {
+    .components-tab-panel__tabs {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 16px;
+        border-bottom: 1px solid #e0e0e0;
+        
+        .components-tab-panel__tabs-item {
+            flex: 1;
+            text-align: center;
+            margin-bottom: -1px;
+            padding: 8px 16px;
+            font-size: 13px;
+            border: 1px solid transparent;
+            border-bottom-color: #e0e0e0;
+            border-radius: 4px 4px 0 0;
+            
+            &:focus {
+                box-shadow: none;
+                outline: none;
+            }
+            
+            &.is-active {
+                background-color: #fff;
+                border-color: #e0e0e0;
+                border-bottom-color: #fff;
+                
+                &:focus {
+                    box-shadow: none;
+                    outline: none;
+                }
+            }
+            
+            &:hover:not(.is-active) {
+                background-color: #f8f8f8;
+            }
+        }
+    }
+    
+    .bootstrap-blocks-breakpoint-description {
+        margin-top: 0;
+        margin-bottom: 16px;
+        font-size: 12px;
+        color: #757575;
+        font-style: italic;
+    }
+}
