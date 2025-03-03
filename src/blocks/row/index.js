@@ -18,8 +18,8 @@ import {
 /**
  * Internal dependencies
  */
-import { BootstrapIcon } from '../../components/bootstrap-icon';
-import { BreakpointTabs } from '../../components/breakpoint-tabs';
+import { BootstrapIcons } from '../../components/bootstrap-icon';
+import { BreakpointsTabs } from '../../components/breakpoint-tabs';
 
 /**
  * Register the block
@@ -28,7 +28,7 @@ registerBlockType('bootstrap-blocks/row', {
     title: __('Row', 'bootstrap-blocks'),
     description: __('Bootstrap row for creating grid layouts with columns.', 'bootstrap-blocks'),
     category: 'bootstrap-blocks',
-    icon: <BootstrapIcon icon="layout" />,
+    icon: <BootstrapIcons icon="layout" />,
     keywords: [
         __('bootstrap', 'bootstrap-blocks'),
         __('row', 'bootstrap-blocks'),
@@ -208,7 +208,7 @@ registerBlockType('bootstrap-blocks/row', {
                         title={__('Vertical Alignment', 'bootstrap-blocks')}
                         initialOpen={false}
                     >
-                        <BreakpointTabs>
+                        <BreakpointsTabs>
                             {({ name, title }) => {
                                 const breakpointName = name.toUpperCase();
                                 const attributeName = `verticalAlign${breakpointName}`;
@@ -227,14 +227,14 @@ registerBlockType('bootstrap-blocks/row', {
                                     </>
                                 );
                             }}
-                        </BreakpointTabs>
+                        </BreakpointsTabs>
                     </PanelBody>
 
                     <PanelBody
                         title={__('Horizontal Alignment', 'bootstrap-blocks')}
                         initialOpen={false}
                     >
-                        <BreakpointTabs>
+                        <BreakpointsTabs>
                             {({ name, title }) => {
                                 const breakpointName = name.toUpperCase();
                                 const attributeName = `horizontalAlign${breakpointName}`;
@@ -253,7 +253,7 @@ registerBlockType('bootstrap-blocks/row', {
                                     </>
                                 );
                             }}
-                        </BreakpointTabs>
+                        </BreakpointsTabs>
                     </PanelBody>
 
                     <PanelBody

@@ -1,0 +1,52 @@
+/**
+ * Tabs Block Frontend Styles
+ */
+
+ .wp-block-bootstrap-blocks-tabs {
+    // Los estilos específicos para las pestañas
+    // La mayoría de los estilos vendrán de Bootstrap
+    
+    // Estilos personalizados para pestañas verticales
+    &.d-flex {
+      .tab-content {
+        flex: 1;
+      }
+      
+      @media (max-width: 768px) {
+        // En móviles, hacemos que las pestañas verticales se vuelvan horizontales
+        flex-direction: column;
+        
+        .nav.flex-column {
+          flex-direction: row !important;
+          overflow-x: auto;
+          margin-bottom: 1rem;
+          margin-right: 0 !important;
+        }
+      }
+    }
+    
+    // Estilo para pestañas con efecto hover
+    .nav-tabs .nav-link,
+    .nav-pills .nav-link {
+      transition: background-color 0.2s, border-color 0.2s, color 0.2s;
+    }
+    
+    // Fix para el contenido de las pestañas
+    .tab-content > .tab-pane {
+      display: none;
+    }
+    
+    .tab-content > .active {
+      display: block;
+    }
+    
+    // Estilos para efecto fade
+    .tab-content > .fade {
+      opacity: 0;
+      transition: opacity 0.15s linear;
+    }
+    
+    .tab-content > .fade.show {
+      opacity: 1;
+    }
+  }

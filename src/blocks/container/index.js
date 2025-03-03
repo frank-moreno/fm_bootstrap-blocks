@@ -17,8 +17,8 @@ import {
 /**
  * Internal dependencies
  */
-import { BootstrapIcon } from '../../components/bootstrap-icon';
-import { ContainerPreview } from './components/container-preview';
+import { BootstrapIcons } from '../../components/bootstrap-icon';
+// import { ContainerPreview } from './components/container-preview';
 
 /**
  * Register the block
@@ -27,7 +27,7 @@ registerBlockType('bootstrap-blocks/container', {
     title: __('Container', 'bootstrap-blocks'),
     description: __('Bootstrap container for creating responsive layouts.', 'bootstrap-blocks'),
     category: 'bootstrap-blocks',
-    icon: <BootstrapIcon icon="layout-three-columns" />,
+    icon: <BootstrapIcons icon="layout-three-columns" />,
     keywords: [
         __('bootstrap', 'bootstrap-blocks'),
         __('container', 'bootstrap-blocks'),
@@ -92,7 +92,7 @@ registerBlockType('bootstrap-blocks/container', {
                             help={__('Add custom classes to the container.', 'bootstrap-blocks')}
                         />
                         
-                        <ContainerPreview containerType={containerType} />
+                        {/* <ContainerPreview containerType={containerType} /> */}
                     </PanelBody>
                 </InspectorControls>
                 

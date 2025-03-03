@@ -1,0 +1,24 @@
+/**
+ * Column Block Frontend Styles
+ */
+
+ .bootstrap-blocks-column {
+    // Los estilos específicos para la columna
+    // La mayoría de los estilos vendrán de Bootstrap
+    
+    // Estilos para columnas con padding personalizado
+    &.has-padding {
+      padding: 1rem;
+    }
+    
+    // Columna con borde
+    &.has-border {
+      border: 1px solid #dee2e6;
+      border-radius: 0.25rem;
+    }
+    
+    // Columna con sombra
+    &.has-shadow {
+      box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    }
+  }

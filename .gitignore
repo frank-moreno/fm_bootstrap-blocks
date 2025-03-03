@@ -46,3 +46,13 @@ wp-config.php
 # Note: If you wish to whitelist themes,
 # uncomment the next line
 #/wp-content/themes
+node_modules
+vendor
+dist
+
+yarn.lock
+composer.lock
+
+.DS_Store
+includes/.DS_Store
+src/.DS_Store

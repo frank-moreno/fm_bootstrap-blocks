@@ -1,0 +1,24 @@
+/**
+ * Container Block Frontend Styles
+ */
+
+ .bootstrap-blocks-container {
+    // Los estilos específicos del contenedor
+    // Nota: La mayoría de los estilos vendrán directamente de Bootstrap
+    
+    // Márgenes adicionales para espacio vertical
+    &.has-margin-top {
+      margin-top: 1.5rem;
+    }
+    
+    &.has-margin-bottom {
+      margin-bottom: 1.5rem;
+    }
+    
+    // Personalizaciones específicas para el tema
+    &.theme-bordered {
+      border: 1px solid #dee2e6;
+      border-radius: 0.25rem;
+      padding: 1.5rem;
+    }
+  }

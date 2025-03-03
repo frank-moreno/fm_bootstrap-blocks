@@ -1,0 +1,85 @@
+/**
+ * Button Block Frontend Styles
+ */
+
+ .bootstrap-blocks-button-wrapper {
+    // Contenedor del botón
+    .bootstrap-blocks-button {
+      display: inline-block;
+      
+      // Espaciado para botones alineados
+      &.alignleft {
+        margin-right: 1em;
+      }
+      
+      &.alignright {
+        margin-left: 1em;
+      }
+      
+      &.aligncenter {
+        text-align: center;
+      }
+      
+      // Estilos para íconos
+      .bootstrap-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        
+        &.bootstrap-icon-arrow-right::before {
+          content: "→";
+        }
+        
+        &.bootstrap-icon-arrow-left::before {
+          content: "←";
+        }
+        
+        &.bootstrap-icon-download::before {
+          content: "↓";
+        }
+        
+        &.bootstrap-icon-upload::before {
+          content: "↑";
+        }
+        
+        &.bootstrap-icon-check::before {
+          content: "✓";
+        }
+        
+        &.bootstrap-icon-x::before {
+          content: "✕";
+        }
+        
+        &.bootstrap-icon-pencil::before {
+          content: "✎";
+        }
+        
+        &.bootstrap-icon-trash::before {
+          content: "🗑";
+        }
+        
+        &.bootstrap-icon-plus::before {
+          content: "+";
+        }
+        
+        &.bootstrap-icon-dash::before {
+          content: "-";
+        }
+      }
+      
+      // Efectos de hover para botones
+      a.btn, button.btn {
+        transition: all 0.2s ease-in-out;
+        
+        &:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        &:active {
+          transform: translateY(0);
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+      }
+    }
+  }

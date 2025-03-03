@@ -9,7 +9,6 @@ import {
     CardDivider,
     CardHeader,
     Card,
-    __experimentalText as Text,
 } from '@wordpress/components';
 
 /**
@@ -118,9 +117,9 @@ export const ContainerPreview = ({ containerType }) => {
     return (
         <Card style={{ marginTop: '15px' }}>
             <CardHeader>
-                <Text size={16} weight={600}>
+                <div style={{ fontWeight: 600, fontSize: '16px' }}>
                     {containerInfo.title}
-                </Text>
+                </div>
                 <Button
                     isSmall
                     variant="tertiary"
@@ -131,15 +130,15 @@ export const ContainerPreview = ({ containerType }) => {
             </CardHeader>
             
             <CardBody>
-                <Text>{containerInfo.description}</Text>
+                <p>{containerInfo.description}</p>
             </CardBody>
             
             <CardDivider />
             
             <CardBody>
-                <Text weight={500}>
+                <div style={{ fontWeight: 500, marginBottom: '10px' }}>
                     {__('Responsive Behavior:', 'bootstrap-blocks')}
-                </Text>
+                </div>
                 
                 <div style={{ 
                     display: 'grid', 
@@ -147,15 +146,15 @@ export const ContainerPreview = ({ containerType }) => {
                     gap: '8px',
                     marginTop: '10px'
                 }}>
-                    <Text weight={600}>{__('Breakpoint', 'bootstrap-blocks')}</Text>
-                    <Text weight={600}>{__('Screen Width', 'bootstrap-blocks')}</Text>
-                    <Text weight={600}>{__('Container Width', 'bootstrap-blocks')}</Text>
+                    <div style={{ fontWeight: 600 }}>{__('Breakpoint', 'bootstrap-blocks')}</div>
+                    <div style={{ fontWeight: 600 }}>{__('Screen Width', 'bootstrap-blocks')}</div>
+                    <div style={{ fontWeight: 600 }}>{__('Container Width', 'bootstrap-blocks')}</div>
                     
                     {containerInfo.breakpoints.map((bp, i) => (
                         <>
-                            <Text key={`bp-${i}-name`}>{bp.name}</Text>
-                            <Text key={`bp-${i}-value`}>{bp.value}</Text>
-                            <Text key={`bp-${i}-width`}>{bp.width}</Text>
+                            <div key={`bp-${i}-name`}>{bp.name}</div>
+                            <div key={`bp-${i}-value`}>{bp.value}</div>
+                            <div key={`bp-${i}-width`}>{bp.width}</div>
                         </>
                     ))}
                 </div>
@@ -184,7 +183,7 @@ export const ContainerPreview = ({ containerType }) => {
                             justifyContent: 'center',
                             border: '1px solid #ddd'
                         }}>
-                            <Text>{containerInfo.title}</Text>
+                            <div>{containerInfo.title}</div>
                         </div>
                     </div>
                 </div>
@@ -192,3 +191,5 @@ export const ContainerPreview = ({ containerType }) => {
         </Card>
     );
 };
+
+export default ContainerPreview;

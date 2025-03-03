@@ -1,0 +1,64 @@
+/**
+ * Column Block Editor Styles
+ */
+
+ .wp-block-bootstrap-blocks-column {
+    // Add a border to make the column visible in the editor
+    border: 1px dashed #ddd;
+    padding: 10px;
+    position: relative;
+    
+    // Column label
+    &::before {
+        content: 'Column';
+        position: absolute;
+        top: -20px;
+        left: 0;
+        background: #f0f0f0;
+        padding: 2px 8px;
+        font-size: 11px;
+        border-radius: 3px;
+        border: 1px solid #ddd;
+        color: #555;
+        z-index: 1;
+    }
+    
+    // Hover state
+    &:hover {
+        border-color: #69c;
+        
+        &::before {
+            background: #69c;
+            color: #fff;
+            border-color: #69c;
+        }
+    }
+    
+    // Empty column state
+    &:empty {
+        min-height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        &::after {
+            content: attr(data-empty-message);
+            color: #888;
+            font-size: 13px;
+            font-style: italic;
+        }
+    }
+    
+    // Make the appender more visible
+    .block-editor-inner-blocks {
+        margin: -10px;
+        padding: 10px;
+    }
+    
+    .block-editor-button-block-appender {
+        width: 100%;
+        justify-content: center;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+}

@@ -1,0 +1,47 @@
+/**
+ * Frontend styles for all blocks
+ */
+
+// Import block-specific styles
+@import '../blocks/container/style.scss';
+@import '../blocks/row/style.scss';
+// Descomenta a medida que crees más bloques
+// @import '../blocks/column/style.scss';
+// @import '../blocks/card/style.scss';
+// @import '../blocks/button/style.scss';
+// @import '../blocks/alert/style.scss';
+// @import '../blocks/tabs/style.scss';
+// @import '../blocks/accordion/style.scss';
+
+// Utilidades generales del frontend
+.bootstrap-blocks-hidden-mobile {
+  @media (max-width: 576px) {
+    display: none !important;
+  }
+}
+
+.bootstrap-blocks-hidden-tablet {
+  @media (min-width: 577px) and (max-width: 991px) {
+    display: none !important;
+  }
+}
+
+.bootstrap-blocks-hidden-desktop {
+  @media (min-width: 992px) {
+    display: none !important;
+  }
+}
+
+// Animaciones
+.bootstrap-blocks-fade-in {
+  animation: bootstrap-blocks-fade-in 0.3s ease-in;
+}
+
+@keyframes bootstrap-blocks-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

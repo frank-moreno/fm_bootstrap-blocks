@@ -90,14 +90,14 @@ module.exports = {
                     from: './node_modules/bootstrap/dist/js/bootstrap.bundle.min.js',
                     to: 'js/bootstrap.bundle.min.js',
                 },
-                {
-                    from: './src/images',
-                    to: 'images',
-                },
-                {
-                    from: './src/fonts',
-                    to: 'fonts',
-                },
+                // {
+                //     from: './src/images',
+                //     to: 'images',
+                // },
+                // {
+                //     from: './src/fonts',
+                //     to: 'fonts',
+                // },
             ],
         }),
     ],

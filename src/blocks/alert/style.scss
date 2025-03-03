@@ -1,0 +1,72 @@
+/**
+ * Alert Block Frontend Styles
+ */
+
+ .wp-block-bootstrap-blocks-alert {
+    // Los estilos específicos para alertas
+    // La mayoría de los estilos vendrán de Bootstrap
+    
+    // Improved layout when using icons
+    .d-flex {
+      align-items: center;
+    }
+    
+    // Add some space between alert content paragraphs
+    .alert-content {
+      p {
+        margin-bottom: 0.5rem;
+        
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+    
+    // Styling for Bootstrap icons
+    .bootstrap-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 1.5em;
+      height: 1.5em;
+      line-height: 1;
+      
+      &.bootstrap-icon-check-circle-fill::before {
+        content: "✓";
+      }
+      
+      &.bootstrap-icon-exclamation-circle-fill::before {
+        content: "!";
+      }
+      
+      &.bootstrap-icon-exclamation-triangle-fill::before {
+        content: "⚠";
+      }
+      
+      &.bootstrap-icon-info-circle-fill::before {
+        content: "i";
+      }
+    }
+    
+    // Custom styles for different alert types with icons
+    &.alert-success .bootstrap-icon {
+      color: #0f5132;
+    }
+    
+    &.alert-danger .bootstrap-icon {
+      color: #842029;
+    }
+    
+    &.alert-warning .bootstrap-icon {
+      color: #664d03;
+    }
+    
+    &.alert-info .bootstrap-icon {
+      color: #055160;
+    }
+    
+    // Smoother fade animation for dismissible alerts
+    &.alert-dismissible.fade {
+      transition: opacity 0.3s ease-in-out;
+    }
+  }

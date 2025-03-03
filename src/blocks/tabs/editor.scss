@@ -1,0 +1,126 @@
+/**
+ * Tabs Block Editor Styles
+ */
+
+ .wp-block-bootstrap-blocks-tabs {
+    // Add some basic styling for the editor
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+    margin-bottom: 20px;
+    padding: 15px;
+    position: relative;
+    
+    // Tabs label
+    &::before {
+        content: 'Tabs';
+        position: absolute;
+        top: -20px;
+        left: 0;
+        background: #f0f0f0;
+        padding: 2px 8px;
+        font-size: 11px;
+        border-radius: 3px;
+        border: 1px solid #ddd;
+        color: #555;
+        z-index: 1;
+    }
+    
+    // Hover state
+    &:hover {
+        box-shadow: 0 0 0 1px #69c;
+        
+        &::before {
+            background: #69c;
+            color: #fff;
+            border-color: #69c;
+        }
+    }
+    
+    // Style navigation
+    .nav {
+        margin-bottom: 1rem;
+        border-bottom: 1px solid #dee2e6;
+        
+        &.nav-pills {
+            border-bottom: none;
+        }
+        
+        &.flex-column {
+            border-bottom: none;
+            border-right: 1px solid #dee2e6;
+            height: 100%;
+        }
+        
+        .nav-link {
+            cursor: pointer;
+            margin-bottom: -1px;
+            background: none;
+            border: 1px solid transparent;
+            
+            &.active {
+                color: #495057;
+                background-color: #fff;
+                border-color: #dee2e6 #dee2e6 #fff;
+            }
+            
+            &:hover:not(.active) {
+                border-color: #e9ecef #e9ecef #dee2e6;
+            }
+        }
+        
+        .nav-pills .nav-link.active {
+            color: #fff;
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+        
+        // Style the add tab button
+        .add-tab-button {
+            color: #007bff;
+            padding: 0.5rem 1rem;
+            
+            &:hover {
+                background-color: #f8f9fa;
+            }
+        }
+    }
+    
+    // Vertical tabs
+    &.d-flex {
+        .nav.flex-column {
+            margin-right: 1rem;
+            margin-bottom: 0;
+            min-width: 150px;
+            
+            .nav-link {
+                border-right-color: transparent;
+                
+                &.active {
+                    border-right-color: #fff;
+                    border-bottom-color: #dee2e6;
+                }
+            }
+        }
+    }
+    
+    // Style tab panes
+    .tab-content {
+        padding: 1rem;
+        background-color: #fff;
+        border: 1px solid #dee2e6;
+        border-top: none;
+        border-radius: 0 0 0.25rem 0.25rem;
+        
+        .tab-pane {
+            min-height: 150px;
+        }
+    }
+    
+    // Style d-flex for vertical tabs
+    &.d-flex {
+        .tab-content {
+            border: 1px solid #dee2e6;
+            border-radius: 0.25rem;
+        }
+    }
+}

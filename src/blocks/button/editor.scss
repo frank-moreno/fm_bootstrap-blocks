@@ -1,0 +1,211 @@
+/**
+ * Button Block Editor Styles
+ */
+
+ .wp-block-bootstrap-blocks-button-wrapper {
+    position: relative;
+    margin-bottom: 1.5em;
+    
+    // Button container
+    .bootstrap-blocks-button {
+        display: flex;
+        align-items: center;
+        
+        // URL input button
+        .block-editor-url-input__button {
+            position: absolute;
+            top: -32px;
+            right: 0;
+            z-index: 10;
+            opacity: 0.7;
+            transition: opacity 0.2s;
+            
+            &:hover {
+                opacity: 1;
+            }
+        }
+        
+        // Button
+        .btn {
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            
+            // Rich text within button
+            .rich-text {
+                display: inline-block;
+                line-height: 1.3;
+            }
+            
+            // Button icons
+            .bootstrap-icon {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                
+                &.bootstrap-icon-arrow-right::before {
+                    content: "→";
+                }
+                
+                &.bootstrap-icon-arrow-left::before {
+                    content: "←";
+                }
+                
+                &.bootstrap-icon-download::before {
+                    content: "↓";
+                }
+                
+                &.bootstrap-icon-upload::before {
+                    content: "↑";
+                }
+                
+                &.bootstrap-icon-check::before {
+                    content: "✓";
+                }
+                
+                &.bootstrap-icon-x::before {
+                    content: "✕";
+                }
+                
+                &.bootstrap-icon-pencil::before {
+                    content: "✎";
+                }
+                
+                &.bootstrap-icon-trash::before {
+                    content: "🗑";
+                }
+                
+                &.bootstrap-icon-plus::before {
+                    content: "+";
+                }
+                
+                &.bootstrap-icon-dash::before {
+                    content: "-";
+                }
+            }
+        }
+        
+        // Block level buttons
+        .btn-block {
+            width: 100%;
+        }
+        
+        // Basic button colors (for editor preview, Bootstrap will handle in frontend)
+        .btn-primary {
+            color: #fff;
+            background-color: #0d6efd;
+            border-color: #0d6efd;
+        }
+        
+        .btn-secondary {
+            color: #fff;
+            background-color: #6c757d;
+            border-color: #6c757d;
+        }
+        
+        .btn-success {
+            color: #fff;
+            background-color: #198754;
+            border-color: #198754;
+        }
+        
+        .btn-danger {
+            color: #fff;
+            background-color: #dc3545;
+            border-color: #dc3545;
+        }
+        
+        .btn-warning {
+            color: #000;
+            background-color: #ffc107;
+            border-color: #ffc107;
+        }
+        
+        .btn-info {
+            color: #000;
+            background-color: #0dcaf0;
+            border-color: #0dcaf0;
+        }
+        
+        .btn-light {
+            color: #000;
+            background-color: #f8f9fa;
+            border-color: #f8f9fa;
+        }
+        
+        .btn-dark {
+            color: #fff;
+            background-color: #212529;
+            border-color: #212529;
+        }
+        
+        .btn-link {
+            color: #0d6efd;
+            text-decoration: underline;
+        }
+        
+        // Outline button styles
+        .btn-outline-primary {
+            color: #0d6efd;
+            border-color: #0d6efd;
+            background-color: transparent;
+        }
+        
+        .btn-outline-secondary {
+            color: #6c757d;
+            border-color: #6c757d;
+            background-color: transparent;
+        }
+        
+        .btn-outline-success {
+            color: #198754;
+            border-color: #198754;
+            background-color: transparent;
+        }
+        
+        .btn-outline-danger {
+            color: #dc3545;
+            border-color: #dc3545;
+            background-color: transparent;
+        }
+        
+        .btn-outline-warning {
+            color: #ffc107;
+            border-color: #ffc107;
+            background-color: transparent;
+        }
+        
+        .btn-outline-info {
+            color: #0dcaf0;
+            border-color: #0dcaf0;
+            background-color: transparent;
+        }
+        
+        .btn-outline-light {
+            color: #f8f9fa;
+            border-color: #f8f9fa;
+            background-color: transparent;
+        }
+        
+        .btn-outline-dark {
+            color: #212529;
+            border-color: #212529;
+            background-color: transparent;
+        }
+        
+        // Button sizes
+        .btn-sm {
+            padding: 0.25rem 0.5rem;
+            font-size: 0.875rem;
+            border-radius: 0.2rem;
+        }
+        
+        .btn-lg {
+            padding: 0.5rem 1rem;
+            font-size: 1.25rem;
+            border-radius: 0.3rem;
+        }
+    }
+}

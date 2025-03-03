@@ -1,0 +1,58 @@
+/**
+ * Accordion Block Frontend Styles
+ */
+
+ .wp-block-bootstrap-blocks-accordion {
+    // Los estilos específicos para acordeón
+    // La mayoría de los estilos vendrán de Bootstrap
+    
+    // Custom animations
+    .accordion-button {
+      transition: all 0.3s ease;
+      
+      &:not(.collapsed) {
+        box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.1);
+      }
+      
+      // Hover state
+      &:hover {
+        background-color: rgba(13, 110, 253, 0.05);
+        
+        &:not(.collapsed) {
+          background-color: rgba(13, 110, 253, 0.1);
+        }
+      }
+      
+      // Make sure rich text content is properly centered
+      span {
+        display: block;
+        flex: 1;
+      }
+    }
+    
+    // Smoother collapsing animation
+    .accordion-collapse {
+      transition: all 0.35s ease;
+    }
+    
+    // Make content area more readable
+    .accordion-body {
+      line-height: 1.6;
+      
+      p:last-child {
+        margin-bottom: 0;
+      }
+    }
+    
+    // Custom style for focused accordion headers
+    .accordion-button:focus {
+      border-color: #86b7fe;
+      outline: 0;
+      box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+    }
+    
+    // Remove focus ring for mouse users
+    .accordion-button:not(:focus-visible) {
+      box-shadow: none;
+    }
+  }

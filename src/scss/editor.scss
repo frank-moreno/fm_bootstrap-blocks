@@ -1,0 +1,54 @@
+/**
+ * Main editor styles
+ */
+
+// Import base styles
+@import './blocks-editor.scss';
+
+// Editor-only styles
+.editor-styles-wrapper {
+  // Ensure proper spacing in the editor
+  .bootstrap-blocks-container,
+  .bootstrap-blocks-row,
+  .bootstrap-blocks-column {
+    min-height: 20px;
+  }
+  
+  // Make it easier to target empty columns
+  .bootstrap-blocks-column:empty {
+    border: 1px dashed #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    &::before {
+      content: "Empty Column";
+      color: #aaa;
+      font-size: 12px;
+    }
+  }
+  
+  // Fix for block appender positioning
+  .block-editor-block-list__block .block-list-appender {
+    position: relative;
+    list-style: none;
+    clear: both;
+    margin: 12px 0;
+  }
+}
+
+// Sidebar controls styling
+.components-panel {
+  .bootstrap-blocks-control-label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+  }
+  
+  .bootstrap-blocks-help-text {
+    margin-top: 4px;
+    font-size: 12px;
+    color: #757575;
+    font-style: italic;
+  }
+}

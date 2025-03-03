@@ -1,0 +1,23 @@
+/**
+ * Row Block Frontend Styles
+ */
+
+ .bootstrap-blocks-row {
+    // Los estilos específicos para la fila
+    // La mayoría de los estilos vendrán de Bootstrap
+    
+    // Clases adicionales para márgenes
+    &.has-margin-top {
+      margin-top: 1.5rem;
+    }
+    
+    &.has-margin-bottom {
+      margin-bottom: 1.5rem;
+    }
+    
+    // Fila con fondo
+    &.has-background {
+      padding: 1.5rem;
+      border-radius: 0.25rem;
+    }
+  }

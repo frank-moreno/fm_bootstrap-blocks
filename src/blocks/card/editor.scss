@@ -1,0 +1,95 @@
+/**
+ * Card Block Editor Styles
+ */
+
+ .wp-block-bootstrap-blocks-card {
+    // Add some basic styling for the editor
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+    margin-bottom: 20px;
+    position: relative;
+    
+    // Card label
+    &::before {
+        content: 'Card';
+        position: absolute;
+        top: -20px;
+        left: 0;
+        background: #f0f0f0;
+        padding: 2px 8px;
+        font-size: 11px;
+        border-radius: 3px;
+        border: 1px solid #ddd;
+        color: #555;
+        z-index: 1;
+    }
+    
+    // Hover state
+    &:hover {
+        box-shadow: 0 0 0 1px #69c;
+        
+        &::before {
+            background: #69c;
+            color: #fff;
+            border-color: #69c;
+        }
+    }
+    
+    // Card image styling
+    .card-img-top,
+    .card-img-bottom {
+        width: 100%;
+        display: block;
+    }
+    
+    // Horizontal card
+    &.flex-row {
+        display: flex;
+        
+        .card-img-left,
+        .card-img-right {
+            width: 30%;
+            flex-shrink: 0;
+            object-fit: cover;
+        }
+        
+        .card-img-left {
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+        
+        .card-img-right {
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+        
+        .card-body {
+            flex: 1;
+        }
+    }
+    
+    // Enhance rich text areas
+    .card-title,
+    .card-subtitle,
+    .card-text {
+        padding: 2px;
+        
+        &:empty {
+            min-height: 24px;
+            position: relative;
+            
+            &::after {
+                content: attr(data-placeholder);
+                opacity: 0.6;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+    }
+    
+    // Make sure button blocks have proper spacing
+    .wp-block-buttons {
+        margin-top: 1rem;
+    }
+}
