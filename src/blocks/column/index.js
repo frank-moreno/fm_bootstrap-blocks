@@ -39,7 +39,7 @@ registerBlockType('bootstrap-blocks/column', {
         html: false,
         anchor: true,
     },
-    parent: ['bootstrap-blocks/row'],
+    // parent: ['bootstrap-blocks/row'],
     attributes: {
         sizeXs: {
             type: 'string',

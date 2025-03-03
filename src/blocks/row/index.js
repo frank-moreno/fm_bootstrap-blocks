@@ -39,7 +39,8 @@ registerBlockType('bootstrap-blocks/row', {
         html: false,
         anchor: true,
     },
-    parent: ['bootstrap-blocks/container'],
+    // parent: ['bootstrap-blocks/container'],
+    allowedBlocks: ['bootstrap-blocks/container', 'core/group', 'core/columns'],
     attributes: {
         verticalAlignXs: {
             type: 'string',
