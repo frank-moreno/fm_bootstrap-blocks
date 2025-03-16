@@ -202,4 +202,4 @@ This plugin is licensed under the GPL v2 or later.
 
 ## Support
 
-If you need help with the plugin, please [contact us](https://yourcompany.com/contact).
+If you need help with the plugin, please [contact us](https://frank-moreno.com/contact).

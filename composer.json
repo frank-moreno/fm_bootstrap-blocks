@@ -1,12 +1,12 @@
 {
-    "name": "your-company/bootstrap-blocks",
+    "name": "frank-moreno/bootstrap-blocks",
     "description": "Custom Gutenberg blocks with Bootstrap integration for WordPress",
     "type": "wordpress-plugin",
     "license": "GPL-2.0-or-later",
     "authors": [
       {
-        "name": "Your Company",
-        "email": "info@yourcompany.com"
+        "name": "frank-moreno",
+        "email": "hello@frank-moreno.com"
       }
     ],
     "minimum-stability": "stable",

@@ -9,6 +9,12 @@ import {
     useBlockProps,
     RichText,
 } from '@wordpress/block-editor';
+import {
+    PanelBody,
+    SelectControl,
+    ToggleControl,
+    TextControl
+} from '@wordpress/components';
 import { BootstrapIcons, BreakpointsTabs } from '../../components';
 
 /**
@@ -334,8 +340,8 @@ registerBlockType('bootstrap-blocks/tabs', {
                             >
                                 {activeTabId === tab.id && (
                                     <InnerBlocks
-                                        template={getTabTemplate(tab.id)}
                                         templateLock={false}
+                                        template={getTabTemplate(tab.id)}
                                     />
                                 )}
                             </div>

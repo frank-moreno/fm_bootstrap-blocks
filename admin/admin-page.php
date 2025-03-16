@@ -16,9 +16,6 @@ $settings = bootstrap_blocks_get_settings();
     <h1><?php echo esc_html(get_admin_page_title()); ?></h1>
     
     <div class="bootstrap-blocks-admin-header">
-        <div class="bootstrap-blocks-admin-logo">
-            <img src="<?php echo esc_url(BOOTSTRAP_BLOCKS_PLUGIN_URL . 'admin/images/bootstrap-blocks-logo.svg'); ?>" alt="Bootstrap Blocks Logo">
-        </div>
         <div class="bootstrap-blocks-admin-version">
             <span><?php esc_html_e('Version', 'bootstrap-blocks'); ?>: <?php echo esc_html(BOOTSTRAP_BLOCKS_VERSION); ?></span>
         </div>
@@ -147,9 +144,6 @@ $settings = bootstrap_blocks_get_settings();
                                             <span class="bootstrap-blocks-toggle-slider"></span>
                                         </label>
                                     </div>
-                                    <div class="bootstrap-blocks-block-icon">
-                                        <img src="<?php echo esc_url(BOOTSTRAP_BLOCKS_PLUGIN_URL . 'admin/images/blocks/' . $block_id . '.svg'); ?>" alt="<?php echo esc_attr($block_name); ?>">
-                                    </div>
                                 </div>
                             <?php endforeach; ?>
                         </div>
@@ -206,15 +200,6 @@ $settings = bootstrap_blocks_get_settings();
                     <h2><?php esc_html_e('Support', 'bootstrap-blocks'); ?></h2>
                     
                     <div class="bootstrap-blocks-support">
-                        <div class="bootstrap-blocks-support-section">
-                            <h3><?php esc_html_e('Need Help?', 'bootstrap-blocks'); ?></h3>
-                            <p><?php esc_html_e('If you need help with Bootstrap Blocks, please check the following resources:', 'bootstrap-blocks'); ?></p>
-                            <ul>
-                                <li><a href="https://yourcompany.com/bootstrap-blocks/documentation/" target="_blank" rel="noopener noreferrer"><?php esc_html_e('Documentation', 'bootstrap-blocks'); ?></a></li>
-                                <li><a href="https://yourcompany.com/bootstrap-blocks/faq/" target="_blank" rel="noopener noreferrer"><?php esc_html_e('FAQ', 'bootstrap-blocks'); ?></a></li>
-                                <li><a href="https://yourcompany.com/bootstrap-blocks/support/" target="_blank" rel="noopener noreferrer"><?php esc_html_e('Contact Support', 'bootstrap-blocks'); ?></a></li>
-                            </ul>
-                        </div>
                         
                         <div class="bootstrap-blocks-support-section">
                             <h3><?php esc_html_e('Bootstrap Resources', 'bootstrap-blocks'); ?></h3>
@@ -230,8 +215,8 @@ $settings = bootstrap_blocks_get_settings();
                             <h3><?php esc_html_e('Get in Touch', 'bootstrap-blocks'); ?></h3>
                             <p><?php esc_html_e('Have questions or suggestions? Get in touch with us:', 'bootstrap-blocks'); ?></p>
                             <ul>
-                                <li><strong><?php esc_html_e('Email:', 'bootstrap-blocks'); ?></strong> <a href="mailto:support@yourcompany.com">support@yourcompany.com</a></li>
-                                <li><strong><?php esc_html_e('Website:', 'bootstrap-blocks'); ?></strong> <a href="https://yourcompany.com/" target="_blank" rel="noopener noreferrer">yourcompany.com</a></li>
+                                <li><strong><?php esc_html_e('Email:', 'bootstrap-blocks'); ?></strong> <a href="mailto:hello@frank-moreno.com">hello@frank-moreno.com</a></li>
+                                <li><strong><?php esc_html_e('Website:', 'bootstrap-blocks'); ?></strong> <a href="https://frank-moreno.com/" target="_blank" rel="noopener noreferrer">frank-moreno.com</a></li>
                             </ul>
                         </div>
                     </div>

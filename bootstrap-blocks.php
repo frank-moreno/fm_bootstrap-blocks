@@ -1,11 +1,11 @@
 <?php
 /**
  * Plugin Name: Bootstrap Blocks
- * Plugin URI: https://yourcompany.com/bootstrap-blocks
+ * Plugin URI: https://github.com/frank-moreno/fm_bootstrap-blocks
  * Description: Custom Gutenberg blocks with Bootstrap integration for faster and more efficient WordPress development.
  * Version: 1.0.0
- * Author: Your Company
- * Author URI: https://yourcompany.com
+ * Author: Frank Moreno
+ * Author URI: https://frank-moreno.com
  * License: GPL v2 or later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain: bootstrap-blocks

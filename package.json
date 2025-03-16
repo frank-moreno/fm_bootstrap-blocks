@@ -15,7 +15,7 @@
       "format:js": "wp-scripts format-js",
       "postinstall": "npm run build"
     },
-    "author": "Your Company",
+    "author": "Frank Moreno",
     "license": "GPL-2.0-or-later",
     "devDependencies": {
       "@wordpress/scripts": "^26.5.0",
